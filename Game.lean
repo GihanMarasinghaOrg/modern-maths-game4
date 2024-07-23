@@ -1,5 +1,9 @@
+import GameServer.Commands
+
 import Game.Levels.GroupDefinition
 import Game.Levels.Basics
+import Game.Levels.Arithmetic
+import Game.Levels.ProofFundamentals
 
 -- Here's what we'll put on the title screen
 Title "Modern Mathematics Game"

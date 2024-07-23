@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Tue Jul  9 15:55:56 2024\n"
+"POT-Creation-Date: Tue Jul 23 16:14:51 2024\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -173,7 +173,7 @@ msgid "Uniqueness of identity"
 msgstr ""
 
 #: Game.Levels.Basics.L01_unique_identity
-msgid "We'll show that the identity is unique. That is, we'll prove:\n"
+msgid "hey again! We'll show that the identity is unique. That is, we'll prove:\n"
 "\n"
 "**Theorem** Suppose $b$ is an element of $G$ such that $b * a = a$,\n"
 "for every $a$ in $G$. Then $b = 1$.\n"
@@ -326,6 +326,87 @@ msgstr ""
 
 #: Game.Levels.Basics
 msgid "We introduce calculation-style proofs and use them to demonstrate some basic group properties.\n"
+"\n"
+"Click on \"Start\" below to begin."
+msgstr ""
+
+#: Game.Levels.Arithmetic.L01_Commutativity
+msgid "Commutativity"
+msgstr ""
+
+#: Game.Levels.Arithmetic.L01_Commutativity
+msgid "Hi! We'll show that $a * b = b * a$.\n"
+"\n"
+"'ring' can be used to simplify and prove equalities involving polynomial-like\n"
+"expressions. Write 'ring' to solve the goal!"
+msgstr ""
+
+#: Game.Levels.Arithmetic.L01_Commutativity
+msgid "`ring`simplifys and proves equalities involving polynomial-like\n"
+"expressions in commutative rings. It leverages the algebraic properties\n"
+" of addition and multiplication to handle complex expressions efficiently.\n"
+"-"
+msgstr ""
+
+#: Game.Levels.Arithmetic.L01_Commutativity
+msgid "Let $a$ and $b$ be natural numbers. Then $a * b = b * a$\n"
+"-"
+msgstr ""
+
+#: Game.Levels.Arithmetic.L01_Commutativity
+msgid "Well done!"
+msgstr ""
+
+#: Game.Levels.Arithmetic
+msgid "Arithmetic"
+msgstr ""
+
+#: Game.Levels.Arithmetic
+msgid "We prove simple statements using arithmetic. Essentially, what we are saying is\n"
+"...computers are good at these calculations and won't let you make silly mistakes!\n"
+"\n"
+"Click on \"Start\" below to begin."
+msgstr ""
+
+#: Game.Levels.ProofFundamentals.L01_Transitivity_of_Subset
+msgid "Transitivity of Subset"
+msgstr ""
+
+#: Game.Levels.ProofFundamentals.L01_Transitivity_of_Subset
+msgid "Hello! We'll show that given sets 𝑆,𝑇, and 𝑈 on a type 𝑋,\n"
+"given h₁: 𝑆⊆𝑇 and h₂: 𝑇⊆𝑈, 𝑆⊆𝑈"
+msgstr ""
+
+#: Game.Levels.ProofFundamentals.L01_Transitivity_of_Subset
+msgid "`intro` nIntroduces new variables and hypotheses into the proof context"
+msgstr ""
+
+#: Game.Levels.ProofFundamentals.L01_Transitivity_of_Subset
+msgid "`apply` used to apply a hypothesis, theorem, or lemma to\n"
+"the current goal, generating new subgoals/goals"
+msgstr ""
+
+#: Game.Levels.ProofFundamentals.L01_Transitivity_of_Subset
+msgid "`exact` If h is a hypothesis or proof term that matches the target, then exact h will close the goal."
+msgstr ""
+
+#: Game.Levels.ProofFundamentals.L01_Transitivity_of_Subset
+msgid "given sets 𝑆,𝑇, and 𝑈 on a type 𝑋, given h₁: 𝑆⊆𝑇 and h₂: 𝑇⊆𝑈, 𝑆⊆𝑈-"
+msgstr ""
+
+#: Game.Levels.ProofFundamentals.L01_Transitivity_of_Subset
+msgid "Well done!\n"
+"Still don't understand? Ask [Proof Guide](https://chatgpt.com/g/g-sbJfmQ6te-proof-guide)."
+msgstr ""
+
+#: Game.Levels.ProofFundamentals
+msgid "Proof Fundamentals"
+msgstr ""
+
+#: Game.Levels.ProofFundamentals
+msgid "Welsome to your first Lean World! Here, we learn the fundamentals of proof,\n"
+"including how to structure proofs correctly and how proof can be thought of\n"
+"as a flow from the hypotheses to the goal(s).\n"
 "\n"
 "Click on \"Start\" below to begin."
 msgstr ""

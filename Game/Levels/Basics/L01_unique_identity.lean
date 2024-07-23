@@ -7,7 +7,7 @@ Level 1
 Title "Uniqueness of identity"
 
 Introduction "
-We'll show that the identity is unique. That is, we'll prove:
+hey again! We'll show that the identity is unique. That is, we'll prove:
 
 **Theorem** Suppose $b$ is an element of $G$ such that $b * a = a$,
 for every $a$ in $G$. Then $b = 1$.
