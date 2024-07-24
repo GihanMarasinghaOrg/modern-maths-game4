@@ -22,7 +22,7 @@ To complete this level, just enter `rw [mul_one]` in the box in the middle pane.
 /-- `rw` is used to rewrite the target or a hypothesis
 
 If `h` is the name of a theorem `rw [h]` rewrites the target using `h`. For example, if `h` is
-the theroem `a = b`, then `rw [h]` causes every instance of `a` in the target to be replaced with
+the theorem `a = b`, then `rw [h]` causes every instance of `a` in the target to be replaced with
 `b`.
 -/
 TacticDoc rw
