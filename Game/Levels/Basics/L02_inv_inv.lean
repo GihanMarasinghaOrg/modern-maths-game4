@@ -31,7 +31,7 @@ This is uniqueness of (left) identity in a group.
 -/
 TheoremDoc MyGroup.inv_inv as "inv_inv" in "Basics"
 
-/-- For every eleement $a$ in a group $G$, we have $(a^{-1})^{-1} = a$. -/
+/-- For every element $a$ in a group $G$, we have $(a^{-1})^{-1} = a$. -/
 Statement inv_inv (a : G) : a⁻¹⁻¹ = a := by
 
   Template
