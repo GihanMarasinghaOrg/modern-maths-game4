@@ -1,19 +1,20 @@
-import Game.Levels.GroupDefinition
-import Game.Levels.Basics
+import GameServer.Commands
+
+import Game.Levels.PALsessions
 
 -- Here's what we'll put on the title screen
 Title "Modern Mathematics Game"
 Introduction
 "
-This is an interactive book aimed at beginning mathematics undergraduates. You'll learn to prove
-theorems online using a computer tool called Lean.
+This is an interactive tool aimed at beginning mathematics undergraduates. You'll learn to prove
+theorems online using a computer programme called Lean.
 
 Each chapter is represented by a coloured circular button in the right-hand pane. Blue indicates your
 current position, green is for completed chapters, and grey is for unread or incomplete chapters.
 
 At every stage in a proof, there is a *target*, the thing you want to prove, and a *context*, the
 set of things you have already proved or assumed at the beginning of your argument.
-The target and context change through the proof.
+The target and context change throughout the proof.
 
 The word *goal* is used to refer variously to the target or to the combination of target and context.
 

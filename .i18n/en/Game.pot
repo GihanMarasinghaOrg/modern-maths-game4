@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Tue Jul  9 15:55:56 2024\n"
+"POT-Creation-Date: Thu Jul 25 15:38:43 2024\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -20,312 +20,189 @@ msgstr ""
 msgid "intermediate goal solved! 🎉"
 msgstr ""
 
-#: Game.Levels.GroupDefinition.L01_mul_one
-msgid "Multiplicative identity"
+#: Game.Levels.PALsessions.L01_session_2
+msgid "Session 2"
 msgstr ""
 
-#: Game.Levels.GroupDefinition.L01_mul_one
-msgid "A group $G$ is a set together with an operation $*$ and a distinguished element $1$, not\n"
-"necessarily the same as the natural number $1$, that satisfies certain properties. We'll introduce\n"
-"these properties in the next few levels. The first property, called `mul_one` asserts that\n"
-"$a * 1 = a$.\n"
+#: Game.Levels.PALsessions.L01_session_2
+msgid "Let `X` be a type and let `S` and `T` be sets on `X`.\n"
 "\n"
-"To complete this level, just enter `rw [mul_one]` in the box in the middle pane.\n"
+"We'll prove that `S ∩ T = T ∩ S`.\n"
 "\n"
-"*Note* `rw` is am abbreviation for the `rewrite` tactic. We use it to rewrite the target\n"
-"`a * 1 = a` to the target `a = a` and thereby complete the proof."
+"To make things easier, a proof template has been provided for you.\n"
+"\n"
+"Firstly, `apply Set.ext` has been used to change the goal of proving `S ∩ T = T ∩ S` into `∀ x : X, x ∈ S ∩ T ↔ x ∈ T ∩ S` using the definition of set extensionality.\n"
+"\n"
+"Secondly, `intros x` has been used to introduce the variable `x : X`.\n"
+"\n"
+"The new goal is to `show x ∈ S ∩ T ↔ x ∈ T ∩ S`. We do so with a proof by calculation, which has already been set up using the `calc` tactic.\n"
+"\n"
+"You will need to fill in the red `sorry`s with appropriate tactics or theorems to justify each line of proof.\n"
+"\n"
+"The `sorry` tactic a really useful way to check if the existing structure of your proof is correct when you're not sure where to go next or how to justify certain lines. This tactic will be available for you in this level and future levels!\n"
+"\n"
+"The first step in the proof by calculation rewrites `x ∈ S ∩ T` using the definition of set intersection. Take a look in the right hand pane to find a tactic or theorem that is used for proving goals of the form `P ↔ Q` where `P` and `Q` are definitionally equal. Replace `sorry` with this tactic.\n"
+"\n"
+"The second step in the proof by calculation uses a theorem to justify the commutativity of and. Find this theorem in the right hand pane and replace the `sorry` with `rw [theorem]`.\n"
+"\n"
+"The final step in the proof by calculation rewrites `(x ∈ T) ∧ (x ∈ S)` using the definition of set intersection. Take a look in the right hand pane to find a tactic or theorem that is used for proving goals of the form `P ↔ Q` where `P` and `Q` are definitionally equal. Replace `sorry` with this tactic."
 msgstr ""
 
-#: Game.Levels.GroupDefinition.L01_mul_one
-msgid "`rw` is used to rewrite the target or a hypothesis\n"
+#: Game.Levels.PALsessions.L01_session_2
+msgid "The `calc` tactic is used to write a 'calculation-style' proof."
+msgstr ""
+
+#: Game.Levels.PALsessions.L01_session_2
+msgid "The `rw` tactic is used to rewrite the target or a hypothesis.\n"
 "\n"
 "If `h` is the name of a theorem `rw [h]` rewrites the target using `h`. For example, if `h` is\n"
 "the theroem `a = b`, then `rw [h]` causes every instance of `a` in the target to be replaced with\n"
 "`b`."
 msgstr ""
 
-#: Game.Levels.GroupDefinition.L01_mul_one
-msgid "`mul_one` is a proof that `a * 1 = a`"
+#: Game.Levels.PALsessions.L01_session_2
+msgid "The `intros` tactic is used to introduce variables of any type."
 msgstr ""
 
-#: Game.Levels.GroupDefinition.L01_mul_one
-msgid "Let $a$ be an element of $G$. Show that $a * 1 = a$."
+#: Game.Levels.PALsessions.L01_session_2
+msgid "Provided with a theorem name and any number of conditions of the theorem, the `apply` tactic is used for opening as many new goals as are necessary to fill in proofs of the remaining conditions of the theorem."
 msgstr ""
 
-#: Game.Levels.GroupDefinition.L01_mul_one
-msgid "Enter `rw [mul_one]` in the text box and press \"Execute\"."
+#: Game.Levels.PALsessions.L01_session_2
+msgid "The `rfl` tactic is used for proving goals of the form `x = y` where `x` and `y` are definitionally equal. It also proves goals of the form `P ↔ Q` if `P` and `Q` are definitionally equal."
 msgstr ""
 
-#: Game.Levels.GroupDefinition.L01_mul_one
-msgid "Great, you've just used the right identity property of groups. We'll learn the left identity property\n"
-"in the next level."
-msgstr ""
-
-#: Game.Levels.GroupDefinition.L02_one_mul
-msgid "Multiplicative identity on the left"
-msgstr ""
-
-#: Game.Levels.GroupDefinition.L02_one_mul
-msgid "In the previous level, we saw that $a * 1 = a$ for every $a$ in a group $G$. In this level, we\n"
-"introduce the property that $1 * a = a$, for every $a$ in $G$."
-msgstr ""
-
-#: Game.Levels.GroupDefinition.L02_one_mul
-msgid "`one_mul` is a proof that `1 * a = a`"
-msgstr ""
-
-#: Game.Levels.GroupDefinition.L02_one_mul
-msgid "Let $a$ be an element of $G$. Show that $1 * (a * 1) = a$."
-msgstr ""
-
-#: Game.Levels.GroupDefinition.L02_one_mul
-msgid "Enter `rw [mul_one]` or `rw [one_mul]` in the text box and press \"Execute\"."
-msgstr ""
-
-#: Game.Levels.GroupDefinition.L02_one_mul
-msgid "Enter `rw [one_mul]` in the text box and press \"Execute\"."
-msgstr ""
-
-#: Game.Levels.GroupDefinition.L02_one_mul
-msgid "Enter `rw [mul_one]` in the text box and press \"Execute\"."
-msgstr ""
-
-#: Game.Levels.GroupDefinition.L02_one_mul
-msgid "I asked you to perform rewrites on two separate lines. But these rewrites can be combined on one\n"
-"line as `rw [mul_one, one_mul]`.\n"
+#: Game.Levels.PALsessions.L01_session_2
+msgid "The `show` tactic is used to state what is being proved. If, for example, the target is to prove `x + y = x + y`, you can indicate and prove this using `show x + y = x + y := from rfl`.\n"
 "\n"
-"In the next level, we'll learn another property of groups."
+"More generally, if the target is to prove `α`, you can close the goal using `show α := T` where `T` is a tactic proof of `α`."
 msgstr ""
 
-#: Game.Levels.GroupDefinition.L03_mul_assoc
-msgid "Multiplicative associativity"
+#: Game.Levels.PALsessions.L01_session_2
+msgid "The theorem `And.comm` states the commutativity of an `and` statement. For example, it does not matter whether you say `I went to see Jack and Jill` or `I went to see Jill and Jack` - the meaning is still the same."
 msgstr ""
 
-#: Game.Levels.GroupDefinition.L03_mul_assoc
-msgid "Brackets can be shifted in a group. This property is called associativity. In Lean, `mul_assoc`\n"
-"is the theorem that $(a*b)*c = a*(b*c)$."
-msgstr ""
-
-#: Game.Levels.GroupDefinition.L03_mul_assoc
-msgid "`mul_assoc` is a proof that `(a * b) * c = a * (b * c)`\n"
-"\n"
-"Note that Lean will write `(a * b) * c` as `a * b * c` to minimise the use of brackets."
-msgstr ""
-
-#: Game.Levels.GroupDefinition.L03_mul_assoc
-msgid "Let $a, b, c$ be elements of $G$. Show that $(a * b) * (b * c) = (a * (b * b)) * c$."
-msgstr ""
-
-#: Game.Levels.GroupDefinition.L03_mul_assoc
-msgid "You'll need several rewrites, which can be done all on one line."
-msgstr ""
-
-#: Game.Levels.GroupDefinition.L03_mul_assoc
-msgid "Almost there. Just one more property!"
-msgstr ""
-
-#: Game.Levels.GroupDefinition.L04_mul_left_inv
-msgid "Left inverse"
-msgstr ""
-
-#: Game.Levels.GroupDefinition.L04_mul_left_inv
-msgid "The left inverse $a^{-1}$ of a group element $a$ satisfies the property that $a^{-1} * a = 1$.\n"
-"This property is `mul_left_inv`, the left multiplicative inverse.\n"
-"\n"
-"*Note* to enter `⁻¹` in Lean, type `\\-1`."
-msgstr ""
-
-#: Game.Levels.GroupDefinition.L04_mul_left_inv
-msgid "`mul_left_inv` is a proof that `a⁻¹ * a = 1`"
-msgstr ""
-
-#: Game.Levels.GroupDefinition.L04_mul_left_inv
-msgid "Let $a, b, c$ be elements of $G$. Show that $(a^{-1} * (b^{-1} * b)) * a = 1 $."
-msgstr ""
-
-#: Game.Levels.GroupDefinition.L04_mul_left_inv
-msgid "Try rewriting with `mul_left_inv`"
-msgstr ""
-
-#: Game.Levels.GroupDefinition.L04_mul_left_inv
-msgid "Remember when Lean writes `x * y * z`, it means `(x * y) * z`. Now use an\n"
-"appropriate multiplicative identity rule"
-msgstr ""
-
-#: Game.Levels.GroupDefinition.L04_mul_left_inv
-msgid "Excellent. You've now seen all the defining properties of a group.\n"
-"Click \"Leave World\" below to leave the Group Definition world and move on to the\n"
-"next world."
-msgstr ""
-
-#: Game.Levels.GroupDefinition
-msgid "Group Definition"
-msgstr ""
-
-#: Game.Levels.GroupDefinition
-msgid "In this world, we introduce the definition of a group.\n"
-"\n"
-"Click on \"Start\" below to begin."
-msgstr ""
-
-#: Game.Levels.Basics.L01_unique_identity
-msgid "Uniqueness of identity"
-msgstr ""
-
-#: Game.Levels.Basics.L01_unique_identity
-msgid "We'll show that the identity is unique. That is, we'll prove:\n"
-"\n"
-"**Theorem** Suppose $b$ is an element of $G$ such that $b * a = a$,\n"
-"for every $a$ in $G$. Then $b = 1$.\n"
-"\n"
-"We'll use the following 'traditional' mathematics proof as a template.\n"
-"\n"
-"**Proof**\n"
-"$$\n"
-"\\begin{align*}\n"
-"b & = b * 1 && [\\text{by identity property}] \\\\\n"
-"  & = 1.     && [\\text{by the hypothesis}]\n"
-"\\end{align*}\n"
-"$$\n"
-"\n"
-"You'll work on the entire proof file in this level, rather than writing a proof\n"
-"a line-at-a-time. In the pane on the right, replace each `sorry` with an appropriate\n"
-"rewrite.\n"
-"\n"
-"*Note* to rewrite with the hypothesis `h`, use `rw [h]`."
-msgstr ""
-
-#: Game.Levels.Basics.L01_unique_identity
-msgid "`calc` is used to write a 'calculation-style' proof"
-msgstr ""
-
-#: Game.Levels.Basics.L01_unique_identity
+#: Game.Levels.PALsessions.L01_session_2
 msgid "`Template` for internal use"
 msgstr ""
 
-#: Game.Levels.Basics.L01_unique_identity
+#: Game.Levels.PALsessions.L01_session_2
 msgid "`Hole` for internal use"
 msgstr ""
 
-#: Game.Levels.Basics.L01_unique_identity
-msgid "`eq_one_of_self_mul_eq (b : G) h` is the proof of `b = 1` if `h` is the hypothesis\n"
-"`h :  ∀ (a : G), b * a = a`.\n"
+#: Game.Levels.PALsessions.L01_session_2
+msgid "`sorry` for internal use"
+msgstr ""
+
+#: Game.Levels.PALsessions.L01_session_2
+msgid "The theorem `inter_comm` states the commutativity of the intersection of sets."
+msgstr ""
+
+#: Game.Levels.PALsessions.L01_session_2
+msgid "The definition `Set.ext` is when two sets are extensionally equal. Suppose S and T are sets on a type X.\n"
+"If the target is to prove S = T, then using `apply Set.ext` changes the target to `∀ x : X, x ∈ S ↔ x ∈ T`."
+msgstr ""
+
+#: Game.Levels.PALsessions.L01_session_2
+msgid "Let X be a type and let S and T be sets on X. Prove that S ∩ T = T ∩ S."
+msgstr ""
+
+#: Game.Levels.PALsessions.L01_session_2
+msgid "Well done! You have completed the proof!\n"
 "\n"
-"This is uniqueness of (left) identity in a group."
+"Does this proof still not make sense? Ask ProofGuide to explain to you! https://chatgpt.com/g/g-sbJfmQ6te-proof-guide"
 msgstr ""
 
-#: Game.Levels.Basics.L01_unique_identity
-msgid "Let $b$ be an element of a group $G$. Suppose for every $a$ in $G$, that\n"
-"$b * a = a$. Call this assumption $h$. Then $b = 1$."
+#: Game.Levels.PALsessions.L02_session_4
+msgid "Session 4"
 msgstr ""
 
-#: Game.Levels.Basics.L01_unique_identity
-msgid "Well done!"
-msgstr ""
-
-#: Game.Levels.Basics.L02_inv_inv
-msgid "Inverse of inverse"
-msgstr ""
-
-#: Game.Levels.Basics.L02_inv_inv
-msgid "In this level, you'll use a `calc` proof to show $(a^{-1})^{-1} = a$, for every\n"
-"$a$ in a group $G$.\n"
+#: Game.Levels.PALsessions.L02_session_4
+msgid "Let f: ℤ → ℤ be the function f(x):= 2x\n"
 "\n"
-"**Remember** enter `\\-1` to produce `⁻¹`.\n"
 "\n"
-"You will need to add more lines of the calculation. Each line should take the form\n"
-"`_ = expr := by rw [fact]`, where `fact` is the name of the definition or theorem you are using\n"
-"and `expr` is some mathematical expression."
+"We'll show that the function f is injective."
 msgstr ""
 
-#: Game.Levels.Basics.L02_inv_inv
-msgid "`inv_inv (b : G) h` is the proof of `b = 1` if `h` is the hypothesis\n"
-"`h :  ∀ (a : G), b * a = a`.\n"
+#: Game.Levels.PALsessions.L02_session_4
+msgid "The `intros` tactic is used to introduce variables of any type."
+msgstr ""
+
+#: Game.Levels.PALsessions.L02_session_4
+msgid "The `have` tactic is used to introduce a hypothesis into the context. For example, `have h : x + y = x + y := from rfl,` introduces the hypothesis `h : x + y = x + y` into the context. `have` requires a tactic proof of the claimed result. Here, `from rfl` is a tactic proof of `x + y = x + y`.\n"
 "\n"
-"This is uniqueness of (left) identity in a group."
+"More generally, `have h : α := T` introduces `h : α` into the context if `T` is a tactic proof of `α`."
 msgstr ""
 
-#: Game.Levels.Basics.L02_inv_inv
-msgid "For every eleement $a$ in a group $G$, we have $(a^{-1})^{-1} = a$."
-msgstr ""
-
-#: Game.Levels.Basics.L02_inv_inv
-msgid "Excellent!"
-msgstr ""
-
-#: Game.Levels.Basics.L03_mul_right_inv
-msgid "Right inverse"
-msgstr ""
-
-#: Game.Levels.Basics.L03_mul_right_inv
-msgid "We've seen that $a^{-1} * a = 1$. In this level, you'll prove that $a * a^{-1} = 1$.\n"
+#: Game.Levels.PALsessions.L02_session_4
+msgid "The `show` tactic is used to state what is being proved. If, for example, the target is to prove `x + y = x + y`, you can indicate and prove this using `show x + y = x + y := from rfl`.\n"
 "\n"
-"Below is a template proof. Replace the `sorry` in the editor pane with this template.\n"
-"To complete the proof, fill in the `sorry` placeholders.\n"
+"More generally, if the target is to prove `α`, you can close the goal using `show α := T` where `T` is a tactic proof of `α`."
+msgstr ""
+
+#: Game.Levels.PALsessions.L02_session_4
+msgid "The `linarith` tactic is used to prove many linear equations and inequalities."
+msgstr ""
+
+#: Game.Levels.PALsessions.L02_session_4
+msgid "`sorry` for internal use"
+msgstr ""
+
+#: Game.Levels.PALsessions.L02_session_4
+msgid "`f_injective` is the theorem that the function `f` is injective. In other words, `∀ (x₁ x₂ : ℤ), f(x₁) = f(x₂) → x₁ = x₂`."
+msgstr ""
+
+#: Game.Levels.PALsessions.L02_session_4
+msgid "Let f: ℤ → ℤ be the function f(x):=2x. Prove that f is injective."
+msgstr ""
+
+#: Game.Levels.PALsessions.L02_session_4
+msgid "To prove f is injective we must show `∀ x₁ x₂ : ℤ, f x₁ = f x₂ → x₁ = x₂`.\n"
+"The first step in our English language proof would be to `assume x₁ x₂ : ℤ`. The Lean equivalent of `assume` is the tactic `intros` which introduces variables of any type."
+msgstr ""
+
+#: Game.Levels.PALsessions.L02_session_4
+msgid "Type `intros x₁ x₂` in the text box and press \"Execute\".\n"
 "\n"
-"```\n"
-"calc\n"
-"  a * a⁻¹ = sorry   := by sorry\n"
-"  _ = 1         := by sorry\n"
-"```"
+"₁ and ₂ are typed backslash 1 and backlash 2"
 msgstr ""
 
-#: Game.Levels.Basics.L03_mul_right_inv
-msgid "`mul_right_inv (a : G)` is the proof that `a * a⁻¹ = 1`.\n"
+#: Game.Levels.PALsessions.L02_session_4
+msgid "Our goal has now changed to prove `f x₁ = f x₂ → x₁ = x₂`. The next step in our English language proof would be to assume a hypothesis, h. Taking inspiration from above, type the correct tactic and variable into the text box and press \"Execute\"."
+msgstr ""
+
+#: Game.Levels.PALsessions.L02_session_4
+msgid "Type `intros h` in the text box and press \"Execute\"."
+msgstr ""
+
+#: Game.Levels.PALsessions.L02_session_4
+msgid "We now have an assumption `h: f x₁ = f x₂` and a new goal to prove `x₁ = x₂`. The next step in our English language proof would be to rewrite our hypothesis using the definition of our function. In Lean we use the `have` tactic to do so."
+msgstr ""
+
+#: Game.Levels.PALsessions.L02_session_4
+msgid "Type `have h₁ : sorry := h` in the text box, filling in `sorry` with the definition of the function and press \"Execute\".\n"
 "\n"
-"This is right inverse property"
+"Use * instead of x for multiplication in Lean."
 msgstr ""
 
-#: Game.Levels.Basics.L03_mul_right_inv
-msgid "Let $a$ be an element of a group $G$. Then $a * a^{-1} = 1$."
+#: Game.Levels.PALsessions.L02_session_4
+msgid "Our goal of x₁ = x₂ now follows by arithmetic. Explore the definitions of tactics by clicking on the boxes in the right hand pane. Select the tactic that will prove our result by arithmetic, type it in the text box and press \"Execute\"."
 msgstr ""
 
-#: Game.Levels.Basics.L03_mul_right_inv
-msgid "Excellent!"
-msgstr ""
-
-#: Game.Levels.Basics.L04_unique_inverse
-msgid "Uniqueness of inverse"
-msgstr ""
-
-#: Game.Levels.Basics.L04_unique_inverse
-msgid "In a previous level, you showed uniqueness of identity. Now we will show uniqueness of inverses.\n"
+#: Game.Levels.PALsessions.L02_session_4
+msgid "Well done! You have completed the proof!\n"
 "\n"
-"That is, you've prove that if $a * b = 1$ then $a^{-1} = b$.\n"
+"Does this proof still not make sense? Ask ProofGuide to explain to you! https://chatgpt.com/g/g-sbJfmQ6te-proof-guide"
+msgstr ""
+
+#: Game.Levels.PALsessions
+msgid "PAL sessions"
+msgstr ""
+
+#: Game.Levels.PALsessions
+msgid "Lean is a fantastic resource that can help you learn how to systematically write proofs. It will double check your answers and remove any of those trivial mistakes that are so easy to make in first year!\n"
 "\n"
-"Below is a template proof. Replace the `sorry` in the editor pane with this template.\n"
-"To complete the proof, fill in the `sorry` placeholders.\n"
-"\n"
-"```\n"
-"calc\n"
-"  a⁻¹ = sorry   := by sorry\n"
-"  _ =  sorry    := by sorry\n"
-"  _ =  sorry    := by sorry\n"
-"  _ =  sorry    := by sorry\n"
-"  _ = b         := by sorry\n"
-"```"
-msgstr ""
-
-#: Game.Levels.Basics.L04_unique_inverse
-msgid "`inv_eq_of_mul_eq_one (h : a * b = 1)` is the proof that `a⁻¹ = b`.\n"
-"\n"
-"This is the uniqueness of inverses."
-msgstr ""
-
-#: Game.Levels.Basics.L04_unique_inverse
-msgid "Let $a$ be an element of a group $G$. Then $a * a^{-1} = 1$."
-msgstr ""
-
-#: Game.Levels.Basics.L04_unique_inverse
-msgid "Excellent!"
-msgstr ""
-
-#: Game.Levels.Basics
-msgid "Group Basics"
-msgstr ""
-
-#: Game.Levels.Basics
-msgid "We introduce calculation-style proofs and use them to demonstrate some basic group properties.\n"
+"You will learn basic Lean skills and proofs through guided PAL sessions.\n"
 "\n"
 "Click on \"Start\" below to begin."
 msgstr ""
@@ -335,15 +212,15 @@ msgid "Modern Mathematics Game"
 msgstr ""
 
 #: Game
-msgid "This is an interactive book aimed at beginning mathematics undergraduates. You'll learn to prove\n"
-"theorems online using a computer tool called Lean.\n"
+msgid "This is an interactive tool aimed at beginning mathematics undergraduates. You'll learn to prove\n"
+"theorems online using a computer programme called Lean.\n"
 "\n"
 "Each chapter is represented by a coloured circular button in the right-hand pane. Blue indicates your\n"
 "current position, green is for completed chapters, and grey is for unread or incomplete chapters.\n"
 "\n"
 "At every stage in a proof, there is a *target*, the thing you want to prove, and a *context*, the\n"
 "set of things you have already proved or assumed at the beginning of your argument.\n"
-"The target and context change through the proof.\n"
+"The target and context change throughout the proof.\n"
 "\n"
 "The word *goal* is used to refer variously to the target or to the combination of target and context.\n"
 "\n"
